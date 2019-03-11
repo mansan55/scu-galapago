@@ -1,3 +1,15 @@
+import * as firebase from 'firebase';
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "<YOUR-API-KEY>",
+  authDomain: "<YOUR-AUTH-DOMAIN>",
+  databaseURL: "<YOUR-DATABASE-URL>",
+  storageBucket: "<YOUR-STORAGE-BUCKET>"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
@@ -60,4 +72,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#263e3d',
   },
 });
-

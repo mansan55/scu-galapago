@@ -18,7 +18,7 @@ export default class HotelsScreen extends React.Component {
             <CardItem>
               <Body>
                 <Text>
-                   Text!
+                   Texting
                 </Text>
               </Body>
             </CardItem>
