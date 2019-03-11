@@ -12,6 +12,9 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
+// Manuel added this
+import { createStackNavigator, createAppContainer, } from 'react-navigation';
+
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
@@ -49,9 +52,7 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <Button
-            onPress={() => {
-              Alert.alert('You tapped the button!');
-            }}
+            onPress={() => this.props.navigation.navigate('Tour')}
             title="Touristic Attractions"
           />
 
