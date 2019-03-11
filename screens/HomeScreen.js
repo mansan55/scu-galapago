@@ -57,16 +57,12 @@ export default class HomeScreen extends React.Component {
           />
 
           <Button
-            onPress={() => {
-              Alert.alert('You tapped the button!');
-            }}
+            onPress={() => this.props.navigation.navigate('Dining')}
             title="Dining"
           />
 
           <Button
-            onPress={() => {
-              Alert.alert('You tapped the button!');
-            }}
+            onPress={() => this.props.navigation.navigate('Hotel')}
             title="Hotels & Hostels"
           />
 
