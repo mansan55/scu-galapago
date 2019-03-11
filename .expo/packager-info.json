@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 39702,
-  "expoServerNgrokUrl": "https://qm-a4u.anonymous.galapago.exp.direct",
-  "packagerNgrokUrl": "https://packager.qm-a4u.anonymous.galapago.exp.direct",
-  "ngrokPid": 39717,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }

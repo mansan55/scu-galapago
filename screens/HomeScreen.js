@@ -17,6 +17,7 @@ import { WebBrowser } from 'expo';
 import { createStackNavigator, createAppContainer, } from 'react-navigation';
 import { MonoText } from '../components/StyledText';
 
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -62,11 +63,6 @@ export default class HomeScreen extends React.Component {
               ><Text>Hotels & Hostels</Text>
             </Button>
 
-            <Button
-              style={styles.button}
-              onPress={() => this.props.navigation.navigate('List')}
-              ><Text>testing the damn database</Text>
-            </Button>
           </View>
 
         </ScrollView>

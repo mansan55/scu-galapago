@@ -1,4 +1,4 @@
-// ItemComponent.js
+// HotelComponent.js
 
 import React, { Component } from 'react';
 import {  View, Text, StyleSheet} from 'react-native';
@@ -14,12 +14,11 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
-        color: 'white',
     }
 });
 
 
-export default class ItemComponent extends Component {
+export default class HotelComponent extends Component {
 
   static propTypes = {
       items: PropTypes.array.isRequired
@@ -30,7 +29,6 @@ export default class ItemComponent extends Component {
       <View style={styles.itemsList}>
         {this.props.items.map((item, index) => {
             return (
-
                 <View key={index}>
                     <Text style={styles.itemtext}>{item.Actividad}</Text>
                     <Text style={styles.itemtext}>{item.Clasificación}</Text>
