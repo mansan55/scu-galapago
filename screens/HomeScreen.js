@@ -4,6 +4,8 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
+  Button,
+  Alert,
   Text,
   TouchableOpacity,
   View,
@@ -42,9 +44,30 @@ export default class HomeScreen extends React.Component {
             </View>
 
             <Text style={styles.getStartedText}>
-              Testing
+              Testing!
             </Text>
           </View>
+
+          <Button
+            onPress={() => {
+              Alert.alert('You tapped the button!');
+            }}
+            title="Touristic Attractions"
+          />
+
+          <Button
+            onPress={() => {
+              Alert.alert('You tapped the button!');
+            }}
+            title="Dining"
+          />
+
+          <Button
+            onPress={() => {
+              Alert.alert('You tapped the button!');
+            }}
+            title="Hotels & Hostels"
+          />
 
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
