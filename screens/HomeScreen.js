@@ -4,12 +4,14 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  Button,
   Alert,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+import {
+  Container, Header, Content, Button, Text
+} from 'native-base';
+
 import { WebBrowser } from 'expo';
 // Manuel added this
 import { createStackNavigator, createAppContainer, } from 'react-navigation';
@@ -22,53 +24,45 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
+
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
             <Image
               source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  require('../assets/images/GO.png')
               }
               style={styles.welcomeImage}
             />
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
-
-            <Text style={styles.getStartedText}>Get started by opening</Text>
-
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
-            </View>
 
             <Text style={styles.getStartedText}>
-              Testing!
+              GalápaGo!
             </Text>
           </View>
 
-          <Button
-            onPress={() => this.props.navigation.navigate('Tour')}
-            title="Touristic Attractions"
-          />
+          <View style={styles.contentContainer}>
+            <Button
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('Tour')}
+              ><Text>Tourist Attractions</Text>
+            </Button>
 
-          <Button
-            onPress={() => this.props.navigation.navigate('Dining')}
-            title="Dining"
-          />
+            <Button
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('Dining')}
+              ><Text>Dining</Text>
+            </Button>
 
-          <Button
-            onPress={() => this.props.navigation.navigate('Hotel')}
-            title="Hotels & Hostels"
-          />
-
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
+            <Button
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('Hotel')}
+              ><Text>Hotels & Hostels</Text>
+            </Button>
           </View>
+
         </ScrollView>
 
       </View>
@@ -110,9 +104,16 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#7CC785',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    margin: 20,
+  },
+
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#263E3D',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -123,6 +124,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+    alignItems: 'center',
   },
   welcomeContainer: {
     alignItems: 'center',

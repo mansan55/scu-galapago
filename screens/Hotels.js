@@ -12,7 +12,7 @@ export default class HotelsScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Header />
+        <Header/>
         <Content>
           <Card>
             <CardItem>
