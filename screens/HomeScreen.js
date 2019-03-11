@@ -111,6 +111,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 10,
     margin: 20,
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   container: {
     flex: 1,
@@ -129,19 +131,21 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
+    width: 150,
+    height: 150,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
+    paddingVertical: 10,
   },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
+    paddingVertical: 5,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -155,9 +159,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
+    fontSize: 40,
+    color: '#11B4B1',
+    lineHeight: 40,
     textAlign: 'center',
   },
   tabBarInfoContainer: {

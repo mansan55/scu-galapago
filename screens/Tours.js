@@ -11,8 +11,7 @@ export default class ToursScreen extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Header />
+      <Container style={styles.container}>
         <Content>
           <Card>
             <CardItem>
@@ -33,6 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#263E3D',
   },
 });
