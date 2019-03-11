@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
-
 
 export default class ToursScreen extends React.Component {
   static navigationOptions = {

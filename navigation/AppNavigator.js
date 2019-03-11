@@ -6,6 +6,7 @@ import ToursScreen from '../screens/Tours.js';
 import HotelsScreen from '../screens/Hotels.js';
 import DiningScreen from '../screens/Dining.js';
 import HomeScreen from '../screens/HomeScreen.js';
+import ListItem from '../screens/ListItem.js'
 
 export default createAppContainer(createStackNavigator({
   // You could add another route here for authentication.
@@ -14,4 +15,5 @@ export default createAppContainer(createStackNavigator({
   Tour: ToursScreen,
   Hotel: HotelsScreen,
   Dining: DiningScreen,
+  List: ListItem,
 }));

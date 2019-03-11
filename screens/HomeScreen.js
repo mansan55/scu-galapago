@@ -61,6 +61,12 @@ export default class HomeScreen extends React.Component {
               onPress={() => this.props.navigation.navigate('Hotel')}
               ><Text>Hotels & Hostels</Text>
             </Button>
+
+            <Button
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('List')}
+              ><Text>testing the damn database</Text>
+            </Button>
           </View>
 
         </ScrollView>
