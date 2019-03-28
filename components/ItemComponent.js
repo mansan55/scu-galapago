@@ -34,6 +34,7 @@ export default class ItemComponent extends Component {
                 <View key={index}>
                     <Text style={styles.itemtext}>{item.Actividad}</Text>
                     <Text style={styles.itemtext}>{item.Clasificación}</Text>
+                    <Text style={styles.itemtext}>{item.Email}</Text>
                 </View>
             )
         })}
