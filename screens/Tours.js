@@ -14,9 +14,8 @@ export default class ToursScreen extends React.Component {
 
   render() {
     return (
-      <Container style={styles.container}>
-        <Content>
 
+      <ScrollView style={styles.container}>
         <Header searchBar rounded>
           <Item>
             <Icon name="ios-search" />
@@ -26,7 +25,9 @@ export default class ToursScreen extends React.Component {
           <Button transparent>
             <Text>Search</Text>
           </Button>
-        </Header>
+        </Header>        
+
+        <Content>
 
           <Card style={styles.card}>
             <CardItem>
@@ -101,8 +102,7 @@ export default class ToursScreen extends React.Component {
           </Card>
 
         </Content>
-      </Container>
-
+      </ScrollView>
     );
   }
 }

@@ -29,6 +29,7 @@ export default class ItemComponent extends Component {
     return (
       <View style={styles.itemsList}>
         {this.props.items.map((item, index) => {
+            if(item.Clasificación === 'Hostal'){
             return (
 
                 <View key={index}>
@@ -37,6 +38,7 @@ export default class ItemComponent extends Component {
                     <Text style={styles.itemtext}>{item.Email}</Text>
                 </View>
             )
+            }
         })}
       </View>
     );

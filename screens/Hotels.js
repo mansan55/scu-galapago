@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
-import ItemComponent from '../components/ItemComponent.js';
+import HotelComponent from '../components/HotelComponent.js';
 
 import { db } from '../db';
 
@@ -31,7 +31,7 @@ export default class HotelsScreen extends React.Component {
         <View style={styles.container}>
             {
                 (this.state.items.length > 0)
-                ? <ItemComponent items={this.state.items} />
+                ? <HotelComponent items={this.state.items} />
                 : <Text>No items</Text>
             }
         </View>

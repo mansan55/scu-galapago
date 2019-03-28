@@ -14,9 +14,11 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
+        color: 'white',
     }
 });
 
+var busType;
 
 export default class HotelComponent extends Component {
 
@@ -28,12 +30,15 @@ export default class HotelComponent extends Component {
     return (
       <View style={styles.itemsList}>
         {this.props.items.map((item, index) => {
-            return (
+            if(item.Clasificación === 'Hostal'){
+              return (
                 <View key={index}>
                     <Text style={styles.itemtext}>{item.Actividad}</Text>
                     <Text style={styles.itemtext}>{item.Clasificación}</Text>
                 </View>
-            )
+                
+              )
+            }
         })}
       </View>
     );
