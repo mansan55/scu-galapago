@@ -1,8 +1,12 @@
 // HotelComponent.js
 
 import React, { Component } from 'react';
-import {  View, Text, StyleSheet} from 'react-native';
+import {  View, StyleSheet, Image} from 'react-native';
 import PropTypes from 'prop-types';
+import { Container, Header, Content, Card, CardItem, Body,
+        Text, Button, Icon, Left, Right, Fragment, Thumbnail,
+        Item, Input
+      } from 'native-base';
 
 const styles = StyleSheet.create({
     itemsList: {
@@ -15,6 +19,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         color: 'white',
+    },
+    container: {
+        flex: 1,
+        paddingTop: 0,
+        backgroundColor: '#263E3D',
+    },
+    card: {
+        color: '#6BC9B3',
     }
 });
 
@@ -33,6 +45,45 @@ export default class HotelComponent extends Component {
             if(item.Clasificación === 'Hostal'){
               return (
                 <View key={index}>
+
+                  <Card style={styles.card}>
+                    <CardItem>
+                      <Left>
+                        <Thumbnail source={require('../assets/images/Canchalagua_logo.png')} />
+                          <Body>
+                            <Text>{item.Isla}</Text>
+                            <Text note>Cafetería</Text>
+                          </Body>
+                      </Left>
+                    </CardItem> 
+                    <CardItem cardBody>
+                      <Image source={
+                        require('../assets/images/Canchalagua.png')
+                      } style={{height: 200, width: null, flex: 1}}/>
+                    </CardItem>
+                    <CardItem>
+                      <Text note>Cafe, Bar and Pizza all in one. Serving ceviche, soups, locally made wine,
+                    and their signature canchalagua pizza</Text>
+                    </CardItem>
+                    <CardItem>
+                      <Left>
+                        <Button transparent>
+                          <Icon active name="wallet" />
+                        </Button>
+
+                        <Button transparent>
+                          <Icon active name="wifi" />
+                        </Button>
+                      </Left>
+                      <Right>
+                        <Button transparent>
+                          <Icon active name="pin" />
+                            <Text>Floreana, Av 12 Febrero y Oswaldo Rosero</Text>
+                        </Button>
+                      </Right>
+                    </CardItem>
+                  </Card>
+
                     <Text style={styles.itemtext}>{item.Actividad}</Text>
                     <Text style={styles.itemtext}>{item.Clasificación}</Text>
                 </View>
@@ -44,3 +95,4 @@ export default class HotelComponent extends Component {
     );
   }
 }
+

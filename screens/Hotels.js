@@ -31,7 +31,7 @@ export default class HotelsScreen extends React.Component {
         <View style={styles.container}>
             {
                 (this.state.items.length > 0)
-                ? <HotelComponent items={this.state.items} />
+                ? (<HotelComponent items={this.state.items} />)
                 : <Text>No items</Text>
             }
         </View>
