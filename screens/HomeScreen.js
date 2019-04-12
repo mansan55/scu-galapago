@@ -44,24 +44,27 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.contentContainer}>
-            <Button
+            <Button rounded large
               style={styles.button}
               onPress={() => this.props.navigation.navigate('Tour')}
-              ><Text>Tourist Attractions</Text>
+              ><Text style={styles.buttonText}>Tourist Attractions</Text>
             </Button>
 
-            <Button
+            <Button rounded large
               style={styles.button}
               onPress={() => this.props.navigation.navigate('Dining')}
-              ><Text>Dining</Text>
+              ><Text style={styles.buttonText}>Dining</Text>
             </Button>
 
-            <Button
+            <Button rounded large
               style={styles.button}
               onPress={() => this.props.navigation.navigate('Hotel')}
-              ><Text>Hotels & Hostels</Text>
+              ><Text style={styles.buttonText}>Hotels & Hostels</Text>
             </Button>
 
+            <Text onPress={() => this.props.navigation.navigate('Settings')} style={styles.settingsText}>
+              Settings
+            </Text>
           </View>
 
         </View>
@@ -106,15 +109,24 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: '#7CC785',
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
     margin: 20,
-    alignItems: 'center',
     alignSelf: 'center',
+    width: 230,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: 20,
+  },
+  settingsText: {
+    color: '#11B4B1',
+    paddingTop: 40,
   },
   container: {
     flex: 1,
     backgroundColor: '#263E3D',
+    alignItems: 'center',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -133,17 +145,17 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 150,
-    height: 150,
+    width: 180,
+    height: 180,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
-    paddingVertical: 10,
+    paddingVertical: 8,
   },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
-    paddingVertical: 5,
+    paddingVertical: 0,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -157,7 +169,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   getStartedText: {
-    fontSize: 40,
+    fontSize: 35,
+    fontWeight: 'bold',
     color: '#11B4B1',
     lineHeight: 40,
     textAlign: 'center',

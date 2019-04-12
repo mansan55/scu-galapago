@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#263E3D',
     },
     card: {
-        color: '#6BC9B3',
+        color: '#F2F6F5',
     }
 });
 
@@ -42,23 +42,23 @@ export default class HotelComponent extends Component {
     return (
       <View style={styles.itemsList}>
         {this.props.items.map((item, index) => {
-            if(item.Clasificación === 'Hostal'){
+            if(item.Clasificación === 'Hostal' || item.Clasificación === 'Casa de Huéspedes'){
               return (
                 <View key={index}>
 
                   <Card style={styles.card}>
                     <CardItem>
                       <Left>
-                        <Thumbnail source={require('../assets/images/Canchalagua_logo.png')} />
+                        <Thumbnail source={require('../assets/images/placeholder.jpg')} />
                           <Body>
                             <Text>{item.Isla}</Text>
-                            <Text note>Cafetería</Text>
+                            <Text note>{item.Clasificación}</Text>
                           </Body>
                       </Left>
                     </CardItem> 
                     <CardItem cardBody>
                       <Image source={
-                        require('../assets/images/Canchalagua.png')
+                        require('../assets/images/placeholder.jpg')
                       } style={{height: 200, width: null, flex: 1}}/>
                     </CardItem>
                     <CardItem>
@@ -78,14 +78,11 @@ export default class HotelComponent extends Component {
                       <Right>
                         <Button transparent>
                           <Icon active name="pin" />
-                            <Text>Floreana, Av 12 Febrero y Oswaldo Rosero</Text>
+                            <Text>{item.DireccionSiit}</Text>
                         </Button>
                       </Right>
                     </CardItem>
                   </Card>
-
-                    <Text style={styles.itemtext}>{item.Actividad}</Text>
-                    <Text style={styles.itemtext}>{item.Clasificación}</Text>
                 </View>
                 
               )
