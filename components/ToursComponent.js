@@ -89,6 +89,7 @@ export default class ToursComponent extends Component {
                   </Card>
                 </View>
                 
+                
               )
             }
         })}
