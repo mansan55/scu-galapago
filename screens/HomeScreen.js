@@ -115,9 +115,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: 230,
     alignItems: 'center',
+    textAlign: 'center',
   },
   buttonText: {
     fontSize: 20,
+    alignItems: 'center',
+    alignSelf: 'center',
+    textAlign: 'center',
   },
   settingsText: {
     color: '#11B4B1',

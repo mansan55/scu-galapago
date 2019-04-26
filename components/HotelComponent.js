@@ -51,7 +51,7 @@ export default class HotelComponent extends Component {
                       <Left>
                         <Thumbnail source={require('../assets/images/placeholder.jpg')} />
                           <Body>
-                            <Text>{item.Can}</Text>
+                            <Text>{item.NombreComercial}</Text>
                             <Text note>{item.Clasificación}</Text>
                           </Body>
                       </Left>

@@ -15,6 +15,7 @@ export default createAppContainer(createStackNavigator({
   // Read more at https://reactnavigation.org/docs/en/auth-flow.html
   Onboarding: Screens,
   Main: HomeScreen,
+  
   Tour: ToursScreen,
   Hotel: HotelsScreen,
   Dining: DiningScreen,

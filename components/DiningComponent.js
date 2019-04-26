@@ -53,7 +53,7 @@ export default class DiningComponent extends Component {
                       <Left>
                         <Thumbnail source={require('../assets/images/placeholder.jpg')} />
                           <Body>
-                            <Text>{item.Isla}</Text>
+                            <Text>{item.NombreComercial}</Text>
                             <Text note>{item.Clasificación}</Text>
                           </Body>
                       </Left>
@@ -74,11 +74,8 @@ export default class DiningComponent extends Component {
                         <Button transparent>
                           <Icon active name="wallet" />
                         </Button>
-
                         <Button transparent>
-                          {
                             <Icon active name="wifi" />
-                          }
                         </Button>
                       </Left>
                       <Right>

@@ -53,7 +53,7 @@ export default class ToursComponent extends Component {
                       <Left>
                         <Thumbnail source={require('../assets/images/placeholder.jpg')} />
                           <Body>
-                            <Text>{item.Isla}</Text>
+                            <Text>{item.NombreComercial}</Text>
                             <Text note>{item.Clasificación}</Text>
                           </Body>
                       </Left>

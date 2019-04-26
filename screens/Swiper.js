@@ -12,6 +12,7 @@ import {
   ScrollView,       // Handles navigation between screens
   StyleSheet,       // CSS-like styles
   View,             // Container component
+  StatusBar,
 } from 'react-native';
 import Button from './Button.js';
 // Manuel got this from HomeScreen.js
@@ -229,6 +230,7 @@ export default class OnboardingScreens extends Component {
         style={[styles.pagination, styles.fullScreen]}
       >
         {dots}
+
       </View>
     );
   }
@@ -240,6 +242,7 @@ export default class OnboardingScreens extends Component {
     const lastScreen = this.state.index === this.state.total - 1;
     return (
       <View pointerEvents="box-none" style={[styles.buttonWrapper, styles.fullScreen]}>
+      <StatusBar hidden />
         {lastScreen
           // Show this button on the last screen
           // TODO: Add a handler that would send a user to your app after onboarding is complete
@@ -262,7 +265,7 @@ export default class OnboardingScreens extends Component {
         {/* Render pagination */}
         {this.renderPagination()}
         {/* Render Continue or Done button */}
-        {this.renderButton()}
+        
       </View>
     );
   }
@@ -272,7 +275,7 @@ const styles = StyleSheet.create({
   // Set width and height to the screen size
   fullScreen: {
     width: width,
-    height: height
+    height: '100%'
   },
   // Main container
   container: {

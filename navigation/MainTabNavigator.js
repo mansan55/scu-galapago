@@ -10,7 +10,7 @@ import Screens from '../screens/Screens.js';
 
 const HomeStack = createStackNavigator({
   // If this doesn't work, change to Home: HomeScreen,
-  Home: Screens,
+  Home: HomeScreen,
 });
 
 HomeStack.navigationOptions = {

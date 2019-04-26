@@ -4,13 +4,19 @@ import {
   Text,         // Renders text
   View          // Container component
 } from 'react-native';
-
+import { createStackNavigator, createAppContainer, } from 'react-navigation';
 import Swiper from './Swiper';
+import Button from './Button.js';
 
 export default class Screens extends Component {
+    static navigationOptions = {
+    header: null,
+  };
   render() {
     return (
+
     <Swiper>
+
       {/* First screen */}
       <View style={[styles.slide, { backgroundColor: '#C04DEE' }]}>
         <Text style={styles.header}>EAT</Text>
@@ -25,6 +31,7 @@ export default class Screens extends Component {
       <View style={[styles.slide, { backgroundColor: '#FC515B' }]}>
         <Text style={styles.header}>LOVE</Text>
         <Text style={styles.text}>Where there is love there is life</Text>
+        <Button text="Start Now" onPress={() => this.props.navigation.navigate('Main')}/>
       </View>
     </Swiper>
     );
@@ -32,6 +39,7 @@ export default class Screens extends Component {
 }
 
 const styles = StyleSheet.create({
+
   // Slide styles
   slide: {
     flex: 1,                    // Take up all screen
@@ -44,7 +52,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir',
     fontSize: 30,
     fontWeight: 'bold',
-    marginVertical: 15,
+    marginVertical: 0,
   },
   // Text below header
   text: {
