@@ -26,8 +26,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#263E3D',
     },
     card: {
-        color: '#6BC9B3',
-    }
+        color: '#666666',
+        paddingTop: 0,
+    },
+
 });
 
 var busType;
@@ -49,7 +51,7 @@ export default class DiningComponent extends Component {
                 <View key={index}>
 
                   <Card style={styles.card}>
-                    <CardItem>
+                    <CardItem style={styles.carditem}>
                       <Left>
                         <Thumbnail source={require('../assets/images/placeholder.jpg')} />
                           <Body>

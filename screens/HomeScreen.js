@@ -17,10 +17,10 @@ import { WebBrowser } from 'expo';
 import { createStackNavigator, createAppContainer, } from 'react-navigation';
 import { MonoText } from '../components/StyledText';
 
-
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
+    gesturesEnabled: false,
   };
 
   render() {
@@ -30,19 +30,14 @@ export default class HomeScreen extends React.Component {
           <View style={styles.welcomeContainer}>
             <Image
               source={
-                  require('../assets/images/GO.png')
+                  require('../assets/images/logo.png')
               }
               style={styles.welcomeImage}
             />
+            <Text style={styles.getStartedText} >GalápaGo!</Text>
           </View>
 
-          <View style={styles.getStartedContainer}>
-
-            <Text style={styles.getStartedText}>
-              GalápaGo!
-            </Text>
-          </View>
-
+         
           <View style={styles.contentContainer}>
             <Button rounded large
               style={styles.button}
@@ -62,9 +57,7 @@ export default class HomeScreen extends React.Component {
               ><Text style={styles.buttonText}>Hotels & Hostels</Text>
             </Button>
 
-            <Text onPress={() => this.props.navigation.navigate('Settings')} style={styles.settingsText}>
-              Settings
-            </Text>
+            <Text style={styles.settingsText} onPress={() => this.props.navigation.navigate('Settings')}>Settings</Text>
           </View>
 
         </View>
@@ -116,8 +109,10 @@ const styles = StyleSheet.create({
     width: 230,
     alignItems: 'center',
     textAlign: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
+    fontFamily: 'Avenir',
     fontSize: 20,
     alignItems: 'center',
     alignSelf: 'center',
@@ -131,6 +126,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#263E3D',
     alignItems: 'center',
+    textAlign: 'center',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -140,26 +136,34 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 10,
     alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 0,
+    marginBottom: 0,
+    textAlign: 'center',
+    paddingTop: 30,
+    justifyContent: 'center',
   },
   welcomeImage: {
-    width: 180,
-    height: 180,
+    width: 250,
+    height: 250,
     resizeMode: 'contain',
-    marginTop: 3,
+    marginTop: 0,
     marginLeft: -10,
-    paddingVertical: 8,
+    paddingTop: 30,
+    justifyContent: 'center',
   },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
     paddingVertical: 0,
+    paddingTop: 0,
+    textAlign: 'center',
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -173,11 +177,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   getStartedText: {
-    fontSize: 35,
+    fontFamily: 'Avenir',
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#11B4B1',
     lineHeight: 40,
     textAlign: 'center',
+    alignSelf: 'center',
+    marginTop: -100,
+    marginBottom: 40,
   },
   tabBarInfoContainer: {
     position: 'absolute',

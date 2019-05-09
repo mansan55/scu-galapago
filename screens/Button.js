@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,           // 2 point border widht
     borderColor: '#FFFFFF',   // White colored border
     paddingHorizontal: 50,    // Horizontal padding
-    paddingVertical: 10,      // Vertical padding
+    paddingVertical: 15,      // Vertical padding
+    bottom: -185,
   },
   // Button text
   text: {

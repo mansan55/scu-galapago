@@ -7,7 +7,7 @@ import HotelsScreen from '../screens/Hotels.js';
 import DiningScreen from '../screens/Dining.js';
 import HomeScreen from '../screens/HomeScreen.js';
 import ListItem from '../screens/ListItem.js';
-import SettingsScreen from '../screens/SettingsScreen.js';
+import SettingsScreen from '../screens/Settings.js';
 import Screens from '../screens/Screens.js';
 
 export default createAppContainer(createStackNavigator({

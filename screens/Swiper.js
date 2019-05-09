@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
   // Pagination indicators
   pagination: {
     position: 'absolute',
-    bottom: 110,
+    bottom: 40,
     left: 0,
     right: 0,
     flex: 1,
@@ -307,7 +307,9 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     marginRight: 3,
     marginTop: 3,
-    marginBottom: 3
+    marginBottom: 3,
+    borderColor: '#FFFFFF',
+    borderWidth: 1,
   },
   // Active dot
   activeDot: {

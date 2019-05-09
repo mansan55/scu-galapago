@@ -14,6 +14,7 @@ let itemsRef = db.ref();
 export default class ToursScreen extends React.Component {
   static navigationOptions = {
     title: 'Touristic Attractions',
+    header: null,
   };
 
   state = {
@@ -31,7 +32,9 @@ export default class ToursScreen extends React.Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
-        <Header searchBar rounded>
+        <Header searchBar rounded style={styles.searchbar}>
+          
+          <Icon name="ios-arrow-back" style={styles.arrowBack} onPress={() => this.props.navigation.navigate('Main')}/>
           <Item>
             <Icon name="ios-search" />
             <Input placeholder="Search tours..." />
@@ -57,12 +60,24 @@ export default class ToursScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  arrowBack: {
+    paddingTop: 8,
+    paddingHorizontal: 8, 
+
+  },
+  searchbar: {
+    flex: 1,
+  },
+
+  spinner: {
+    position: 'absolute',
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
+
   container: {
     flex: 1,
     paddingTop: 0,
     backgroundColor: '#263E3D',
-  },
-  card: {
-    color: '#6BC9B3',
   },
 });
