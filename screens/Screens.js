@@ -64,9 +64,6 @@ const styles = StyleSheet.create({
     width: 320,
     alignSelf: 'center',
   },
-  button: {
-    
-  },
   // Slide styles
   slide: {
     flex: 1,                    // Take up all screen

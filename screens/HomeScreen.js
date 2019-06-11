@@ -57,7 +57,6 @@ export default class HomeScreen extends React.Component {
               ><Text style={styles.buttonText}>Hotels & Hostels</Text>
             </Button>
 
-            <Text style={styles.settingsText} onPress={() => this.props.navigation.navigate('Settings')}>Settings</Text>
           </View>
 
         </View>
